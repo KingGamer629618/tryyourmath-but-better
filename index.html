@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tryyourmath but better</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Try Your Math</h1>
+      <p>But Better</p>
+
+      <div id="question" style="display: none">
+        <h3 id="currentProblem"></h3>
+
+        <div id="answers"></div>
+
+        <div>
+          <p>Remaining Time: <span id="rt"></span></p>
+          <p>Score: <span id="score"></span></p>
+
+          <button onclick="endGame()">End Game</button>
+        </div>
+      </div>
+
+      <div id="summary" style="display: none">
+        <h2>Summary</h2>
+
+        <p>Time: <span id="tim"></span></p>
+        <p>Questions Answered: <span id="qa"></span></p>
+        <br />
+        <p>Total Correct: <span id="cor"></span></p>
+        <p>Total Incorrect: <span id="icor"></span></p>
+        <p>Total Penalty: -<span id="pen"></span></p>
+        <p>Score: <span id="sco"></span></p>
+
+        <button onclick="showResults = false; results = null;">Continue</button>
+      </div>
+
+      <div id="start">
+        <h3>Choose Difficulty</h3>
+
+        <select id="difficultyS">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <select id="time">
+          <option value="10">10 Seconds</option>
+          <option value="30">30 Seconds</option>
+          <option value="60">1 Minute</option>
+          <option value="120">2 Minutes</option>
+          <option value="300">5 Minutes</option>
+          <option value="600">10 Minutes</option>
+        </select>
+
+        <br /><br />
+
+        <button onclick="startGame()">Start Game!</button>
+
+        <p>Best Score: <span id="bes">0</span></p>
+        <p>Previous Score: <span id="old">0</span></p>
+      </div>
+    </div>
+  </body>
+</html>
